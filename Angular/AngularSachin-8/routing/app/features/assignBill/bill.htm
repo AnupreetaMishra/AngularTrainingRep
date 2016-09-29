@@ -1,0 +1,12 @@
+<div >
+        <h2>Select The Items You want to buy</h2>
+        <div ng-repeat="x in names">
+        <input type="checkbox" ng-model="item.isSelected" ng-change="value(item.isSelected,x)" />{{x.name}} {{x.price}}</div>
+        <hr/>
+        <div>Selected Item</div>
+        <div ng-repeat="y in selectedItems" ng-show="selectedItems.length>0">{{y.name}}     {{y.price}}</div>
+        <div ng-show="selectedItems.length<=0">No item selected</div>
+        <hr/>
+  <div>Total Price {{selectedItems| getprice}}</div>
+
+ </div>

@@ -1,0 +1,64 @@
+<form class="form-horizontal" name="employeeForm" novalidate> 
+    
+<table border="0"  class="form- group"> 
+<tr><td>Enter First Name:</td><td><input name="firstname" type="text" ng-model="firstName" required placeholder="First Name"> 
+   <span style="color:red" ng-show="employeeForm.firstname.$dirty && employeeForm.firstname.$invalid"> 
+      <span ng-show="employeeForm.firstname.$error.required">First Name is required.</span> 
+   </span> 
+</td></tr> 
+<tr><td>Enter Last Name: </td><td><input name="lastname"  type="text" ng-model="lastName" required placeholder="Last Name"> 
+   <span style="color:red" ng-show="employeeForm.lastname.$dirty && employeeForm.lastname.$invalid"> 
+      <span ng-show="employeeForm.lastname.$error.required">Last Name is required.</span> 
+   </span> </td></tr> 
+<tr><td>Email: </td><td><input name="email" type="email" ng-model="email" length="100" required placeholder="Email"> 
+<span style="color:red" ng-show="employeeForm.email.$dirty && employeeForm.email.$invalid"> 
+      <span ng-show="employeeForm.email.$error.required">Email is required.</span> 
+   <span ng-show="employeeForm.email.$error.email">Invalid email address.</span> 
+   </span> 
+</td></tr> 
+<tr><td>Contact Number:</td><td><input name="contact" type="number" ng-model="contact" required placeholder="Contact"> 
+   <span style="color:red" ng-show="employeeForm.contact.$dirty && employeeForm.contact.$invalid"> 
+      <span ng-show="employeeForm.contact.$error.required">Contact is required.</span> 
+   </span> 
+</td></tr>
+<tr><td>Select Your Gender:</td>
+<td> <select name="Gender" ng-model="gender">
+<option value="">Select</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  
+</select>
+</td></tr>
+
+
+
+<tr><td>Select Your Location:</td>
+<td> <select name="Location" required ng-model="location">
+<option value="">Select</option>
+  <option value="India">India</option>
+  <option value="USA">USA</option>
+  <option value="UK">UK</option>
+  <option value="Russia">Russia</option>
+  <option value="China">China</option>
+  
+</select>
+</td></tr>
+
+<tr><td><button ng-click="Clear()" ng-disabled="employeeForm.firstname.$invalid || 
+      employeeForm.lastname.$invalid || employeeForm.email.$invalid">Clear</button></td><td><button 
+ ng-disabled="employeeForm.firstname.$dirty && employeeForm.firstname.$invalid || 
+     employeeForm.lastname.$dirty && employeeForm.lastname.$invalid || 
+     employeeForm.email.$dirty && employeeForm.email.$invalid" 
+ ng-click="submit()">Submit</button></td></tr> 
+</td></tr> 
+</table> 
+<table border="0"> 
+<tr><td>FirstName: </td><td>{{result}}</td></tr> 
+<tr><td>LastName: </td><td>{{result2}}</td></tr> 
+<tr><td>Email: </td><td>{{result3}}</td></tr> 
+<tr><td>Contact: </td><td>{{result4}}</td></tr> 
+<tr><td>Gender: </td><td>{{result5}}</td></tr> 
+<tr><td>Location: </td><td>{{result6}}</td></tr> 
+</td></tr> 
+</table> 
+</form> 

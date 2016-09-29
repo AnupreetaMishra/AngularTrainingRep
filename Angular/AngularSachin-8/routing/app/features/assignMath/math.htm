@@ -1,0 +1,10 @@
+
+<div> 
+      <p>Enter a number: <input type="number" ng-model="number" ng-change="doCalculations(sign, number)" /> 
+      <select ng-model="sign" ng-change="doCalculations(sign, number)">
+            <option value="Fact">Factorial
+            <option value="Cube">X<sup>3</sup>
+            <option value="Square">X<sup>2</sup>
+        </select>
+      <p>Result: {{result}}</p> 
+   </div> 

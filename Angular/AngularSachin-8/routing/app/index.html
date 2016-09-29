@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Angular-Gulp-Assignment</title>  
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="mainApp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>  Assignments:</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#addStudents">Add Students</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#viewStudents">View Students</a>
+                    </li>
+                    <li>
+                        <a href="#viewFullName">Assignment 1</a>
+                    </li>
+                    <li>
+                        <a href="#funMath">Assignment 2</a>
+                    </li>
+                    <li>
+                        <a href="#funEmp">Assignment 3</a>
+                    </li>
+                    <li>
+                        <a href="#funCurr">Assignment 4</a>
+                    </li>
+                     <li>
+                        <a href="#funValid">Assignment 5</a>
+                     </li>
+                     <li>
+                        <a href="#funBill">Assignment 6</a>
+                     </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<div ng-view></div>
+    <!--<div>
+        <p><a href="#addStudents">Add Student</a></p>
+        <p><a href="#viewStudents">View Students</a></p>
+        <div ng-view></div>
+    </div>-->
+</body>
+<script src="app.js"></script>
+<script src="features/viewStudentsController.js"></script>
+<script src="features/addStudentsController.js"></script>
+<script src="features/assignMath/mathController.js"></script>
+<script src="features/assignEmp/empController.js"></script>
+<script src="features/assignFormat/formatController.js"></script>
+<script src="features/assignValid/validController.js"></script>
+<script src="features/assignBill/billControl.js"></script>
+</html>

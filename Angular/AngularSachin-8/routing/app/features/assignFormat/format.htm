@@ -1,0 +1,13 @@
+
+<table border="0"> 
+<tr><td>Enter first name:</td><td><input type="text" ng-model="student.firstName"></td></tr> 
+<tr><td>Enter last name: </td><td><input type="text" ng-model="student.lastName"></td></tr> 
+<tr><td>Enter fees: </td><td><input type="text" ng-model="student.fees"></td></tr> 
+</table> 
+<br/> 
+<table border="0"> 
+<tr><td>Name in Upper Case: </td><td>{{fullName() | uppercase}}</td></tr> 
+<tr><td>Name in Lower Case: </td><td>{{fullName() | lowercase}}</td></tr> 
+<tr><td>fees: </td><td>{{student.fees | currency}}</td></tr> 
+</td></tr> 
+</table> 

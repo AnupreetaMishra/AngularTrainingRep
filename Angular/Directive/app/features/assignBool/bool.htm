@@ -1,0 +1,14 @@
+<div>
+    <table  class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Technology</th>
+        </tr>
+         <tr ng-repeat="name in names | orderBy:'id'">
+            <td>{{name.id}}</td>
+            <td>{{name.name}}</td>
+            <td>{{name.tech}}</td>
+        </tr>
+    </table>
+</div>

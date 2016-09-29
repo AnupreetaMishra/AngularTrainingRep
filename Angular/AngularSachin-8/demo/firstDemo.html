@@ -1,0 +1,44 @@
+<!--Simple Javascript Way-->
+
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <label> Name: </label>
+        <input id="nameId" type="text" onkeyup="onNameChange()" />
+        <h1 id="display"> </h1>
+        <div>
+</body>
+
+<script type="text/javascript">
+    function onNameChange() { 
+         document.getElementById('display').innerHTML = document.getElementById('nameId').value;   
+    }      
+</script>
+
+</html>
+
+
+
+<!--Angular Way-->
+ 
+
+<!--<!doctype html>
+<html>   
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+   </head>
+   
+   <body  ng-app>
+      <div>
+         <label>Name:</label>
+         <input type = "text" ng-model = "name" > 
+         <h1 ng-bind="name"></h1>
+      </div>
+      
+   </body>
+</html>-->
